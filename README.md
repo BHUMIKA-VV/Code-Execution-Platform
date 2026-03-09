@@ -5,7 +5,7 @@ Welcome to the **Code Execution Platform**, a cutting-edge system designed for s
 
 ---
 
-## 🚀 What Makes CodeGuard Stand Out
+## 🚀 What Makes Code Execution Platform Stand Out
 
 ### Execution Engine
 - **Instant Runs**: Our pre-heated Docker pools mean no waiting – code executes the moment you hit run.
@@ -14,7 +14,7 @@ Welcome to the **Code Execution Platform**, a cutting-edge system designed for s
 - **Live Terminal**: Experience real-time output streaming over WebSockets, complete with safeguards against infinite loops and interactive prompts.
 
 ### For Learners
-- **Smart Retries**: Failed attempts? CodeGuard handles reattempts automatically, with faculty approval workflows built-in.
+- **Smart Retries**: Failed attempts? Code Execution Platform handles reattempts automatically, with faculty approval workflows built-in.
 - **Mobile-Friendly**: Navigate subjects and submissions effortlessly on any device, thanks to adaptive layouts.
 - **Progress Tracking**: Get immediate insights into your code's performance, with detailed breakdowns of test cases and metrics.
 
@@ -23,7 +23,7 @@ Welcome to the **Code Execution Platform**, a cutting-edge system designed for s
 
 ### Sleek User Interface
 - **Modern Aesthetics**: Glassmorphism meets fluid animations for a premium feel that doesn't sacrifice functionality.
-- **Responsive Design**: From desktops to phones, CodeGuard scales beautifully with hybrid card/table views.
+- **Responsive Design**: From desktops to phones, Code Execution Platform scales beautifully with hybrid card/table views.
 - **Fast Loading**: Skeleton loaders ensure the UI feels instant, even during heavy computations.
 
 ### Admin Tools
@@ -61,7 +61,7 @@ Welcome to the **Code Execution Platform**, a cutting-edge system designed for s
 
 ## 🏗️ Architecture Overview
 
-CodeGuard follows a **microservices-inspired architecture** designed for scalability, security, and real-time performance. The system is divided into distinct layers, each handling specific responsibilities to ensure efficient code execution and user management.
+Code Execution Platform follows a **microservices-inspired architecture** designed for scalability, security, and real-time performance. The system is divided into distinct layers, each handling specific responsibilities to ensure efficient code execution and user management.
 
 ### High-Level Components
 - **Frontend Layer**: A modern Next.js application providing a responsive UI for students, faculty, and admins. It handles user authentication, code editing, and real-time interactions via WebSockets.
@@ -138,7 +138,7 @@ graph TB
 
 ## 🗄️ Setting Up Your Database (Supabase)
 
-CodeGuard's data backbone is a carefully crafted PostgreSQL setup, fortified with 44 Row-Level Security (RLS) policies to keep student, faculty, and admin data strictly separated.
+Code Execution Platform's data backbone is a carefully crafted PostgreSQL setup, fortified with 44 Row-Level Security (RLS) policies to keep student, faculty, and admin data strictly separated.
 
 1. **Find the Schema File**: Head over to [`supabase/migrations/20240101000000_init.sql`](supabase/migrations/20240101000000_init.sql) for the full schema.
 2. **Apply It**:
@@ -152,7 +152,7 @@ CodeGuard's data backbone is a carefully crafted PostgreSQL setup, fortified wit
 
 ## 🛠️ Quick Start with Docker Compose
 
-The fastest path to seeing CodeGuard in action is via Docker Compose – it spins up everything you need in one go.
+The fastest path to seeing Code Execution Platform in action is via Docker Compose – it spins up everything you need in one go.
 
 ### What You'll Need
 - Docker and Docker Compose installed.
@@ -200,7 +200,7 @@ Pro Tip: If you're new to Docker, this setup handles all the heavy lifting – n
 
 ## 💻 Developing Locally (Manual Setup)
 
-Prefer to tinker with individual components? Here's how to run CodeGuard piece by piece for development.
+Prefer to tinker with individual components? Here's how to run Code Execution Platform piece by piece for development.
 
 ### Backend First
 1. Make sure Docker is up and Redis is running (usually on localhost:6379).

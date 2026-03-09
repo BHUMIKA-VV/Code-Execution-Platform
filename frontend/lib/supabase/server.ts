@@ -1,0 +1,35 @@
+import { createServerClient } from "@supabase/ssr";
+import { Database } from "./database.types";
+import { cookies } from "next/headers";
+
+/**
+ * Creates a new Supabase client for each server request.
+ * This ensures proper session handling and avoids cross-request leakage.
+ */
+export async function createClient() {
+  const cookieStore = await cookies();
+
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+
+  return createServerClient<Database>(
+    supabaseUrl,
+    supabaseAnonKey,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, { ...options, maxAge: 7200 }),
+            );
+          } catch {
+            // Safe to ignore if called from a Server Component
+          }
+        },
+      },
+    },
+  );
+}
