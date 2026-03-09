@@ -233,41 +233,6 @@ This setup gives you full control – perfect for debugging or adding features.
 
 ---
 
-## 🧱 Architecture Overview
 
-```mermaid
-graph TD
-    User[User Browser]
-    FE[Next.js Frontend]
-    BE[Express Backend]
-    DB[(Supabase DB)]
-    Redis[(Redis Queue)]
-    Docker[Docker Runtime]
-    AI[Gemini AI]
-
-    User <-->|HTTP/WS| FE
-    FE <-->|HTTP/WS| BE
-    BE <-->|Read/Write| DB
-    BE <-->|Jobs| Redis
-    BE <-->|Execute| Docker
-    BE <-->|Analyze| AI
-    Docker -->|Result| BE
----
-
-## 🤝 Contributing
-
-We'd love your help to make CodeGuard even better! Whether it's bug fixes, new features, or docs improvements, here's how to get involved:
-
-1. Fork the repo and create a feature branch (`git checkout -b feature/YourIdea`).
-2. Make your changes and commit with clear messages.
-3. Push and open a pull request – we'll review it promptly.
-
-Got questions? Open an issue first to discuss.
-
----
-
-## 📄 License
-
-CodeGuard is open-source under the MIT License. Feel free to use, modify, and distribute – just keep the original license notice intact.
 
 
